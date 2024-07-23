@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 128 - Javascript</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+      <div style="width: 500px; height: 600px;">
+        <canvas id="myChart"></canvas>
+      </div>
+
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        let labelsX = ['Disponibilidade', 'Qualidade', 'Performance']
+        let valores = [0, 0, 0]
+
+        let grafico1 = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labelsX,
+            datasets: [{
+              label: '# of Votes',
+              data: valores,
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+
+        const endpoint = 'https://b891de95-6520-4183-9348-d2a78a6841c7-00-2hfql419q3nwu.worf.replit.dev'
+
+        fetch(endpoint)
+        .then(res=>res.json())
+        .then(res=>{
+          console.log(res);
+          valores[0] =  res.disponibilidade
+          valores[1] = res.qualidade
+          valores[2] = res.performance
+          grafico1.update()
+        })
+
+      </script>
+ 
+</body>
+
+</html>
+
+/* API:
+
+var http = require('http');
+http.createServer(function(req, res){
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.writeHead(200, {'Content-Type': 'application/json'});
+
+  let oee = {
+    disponibilidade: Math.round(Math.random() * 100),
+    qualidade: Math.round(Math.random() * 100),
+    performance: Math.round(Math.random() * 100)
+  }
+  res.end(JSON.stringify(oee));
+}).listen(8080);
+
+*/  

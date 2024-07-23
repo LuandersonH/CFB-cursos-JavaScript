@@ -1,0 +1,48 @@
+* {
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: large;
+
+}
+
+.campoForm {
+    width: 300px;
+    border: 5px solid rgb(210, 99, 99);
+    border-radius: 10px;
+    margin: 5px 5px 10px 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.campoForm input {
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.campoForm button {
+    background-color: antiquewhite;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+}
+.res {
+    width: 300px;
+    height: max-content;
+    border: 3px solid black;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.pessoa {
+    border: 3px #444  solid;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+}

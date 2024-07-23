@@ -1,0 +1,113 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+body {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.calc {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 0px;
+    left: -220px;
+    transition: all 0.2s;
+}
+
+.calc_principal {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 220px;
+    background-color: #eee;
+    border: 2px solid rgb(27, 49, 46);
+    border-radius: 5px;
+}
+
+.calc_exibir {
+    left: 0px !important;
+    transition: all 0.2s;
+}
+
+.calc_aba {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 50px;
+    background-color: rgb(27, 122, 111);
+    border-radius: 0px 8px 0px 8px;
+    cursor: pointer;
+}
+
+.div_nome{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 210px;
+    padding: 1px;
+
+}
+
+.div_display{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    border: 1px solid rgb(22, 110, 97);
+    width: 210px;
+}
+
+#display {
+    width: 210px;
+    padding: 7px;
+    text-align: right;
+    font-family: monospace;
+    font-size: large;
+    background-color: rgb(27, 49, 46);
+}
+
+.div_teclas{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 210px;
+    height: 270px;
+    flex-wrap: wrap;
+    border: solid rgb(22, 110, 97) 1px;
+}
+
+.tecla {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    background-color: rgb(57, 56, 56);
+    border-radius: 5px;
+    margin: 1px;
+    border: 1px solid rgb(22, 110, 97);
+    cursor: pointer;
+    
+}
+
+
+.teclaOp {
+    background-color: rgb(18, 82, 72) !important; 
+    border-color: rgb(22, 110, 97) !important;
+}
+
+.tecla:hover{
+    background-color: rgb(61, 46, 46);
+}
+

@@ -1,0 +1,8 @@
+
+button {
+    font-weight: bolder;
+    color: rgb(99, 117, 234);
+    cursor: pointer;
+    width: 100px;
+    height: 50px;
+}

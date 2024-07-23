@@ -1,0 +1,7 @@
+.topo {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(61, 14, 14, 0.475);
+}

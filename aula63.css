@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 5pxpx;
+    border: none;
+    box-sizing: border-box;
+    font-size: large;
+}
+
+.carros {
+    background-color: bisque;
+    display: flex;
+    width: 100%;
+    border:3px solid black;
+    padding: 5px;
+    border-radius: 5px; 
+}
+
+.carro {
+    border: 3px solid lightseagreen;
+    background-color: blanchedalmond;
+    padding: 5px;
+    border-radius: 5px; 
+    display: flex;
+    width: 200px;
+}
+
+.campoForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.campoForm input {
+    background-color: bisque;
+    padding: 5px;
+    border-radius: 5px;
+    border: 3px solid black;
+}
+
+.campoForm button {
+    background-color: bisque;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 5px;
+    border:3px solid black;
+}
