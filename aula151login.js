@@ -181,6 +181,7 @@ class Login {
                 console.error('Erro na requisição:', err);
             });
         
+        //Validação da API: 
         // if(mat=="123" && pas=="321") {
         //     return true;
         // } else {
@@ -197,3 +198,32 @@ class Login {
 };
 
 // export {Login};
+
+
+//API:
+
+// var http = require('http');
+// var url = require('url');
+
+// http.createServer(function(req,res) {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.writeHead(200, {'Content-Type': 'application/json' });
+
+//   let parametros = url.parse(req.url,true);
+
+//   let mat = parametros.query.matricula;
+//   let senha = parametros.query.senha;
+
+//   let dados = null
+
+//   if(mat=="123" && senha=="321") {
+//     dados = {
+//       nome: "Bruno",
+//       acesso: 10
+//     }
+//   }
+//   res.end(JSON.stringify(dados));
+  
+// }).listen(8080);
+
+// Acessar o url: https://5a72493b-be22-4c35-a0f6-ba012ae6021a-00-3icrzf9xsvybj.spock.replit.dev/?matricula=123&senha=321
