@@ -1,0 +1,7 @@
+NOME: Js Delivr
+LINK: https://www.jsdelivr.com/?docs=gh
+MODELO: https://cdn.jsdelivr.net/gh/conta_github/nome_repositorio_arquivo
+
+LINK DO GITHUB: https://github.com/LuandersonH/CFB-cursos-JavaScript/blob/main/aula150login.js
+
+RESULTADO FINAL:https://cdn.jsdelivr.net/gh/LuandersonH/CFB-cursos-JavaScript/aula150login.js
