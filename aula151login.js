@@ -10,13 +10,11 @@ class Login {
     static callback_nao = null;
     static config = {
         cor: "rgb(106, 35, 35)",
-        img: "0dead.png"
+        img: "0dead.png",
+        endpoint: null //"https://5a72493b-be22-4c35-a0f6-ba012ae6021a-00-3icrzf9xsvybj.spock.replit.dev/"
     }
 
-    static login=(callback_ok, callback_nao, config=null)=>{
-        if (config!=null) {
-            this.config=config;
-        }
+    static login=(callback_ok, callback_nao, config)=>{
 
         this.callback_ok=()=>{callback_ok()};
         this.callback_nao=()=>{callback_nao()};
@@ -142,7 +140,7 @@ class Login {
         console.log(h1_pag);
         let mat = document.getElementById("f_username").value;
         let pas = document.getElementById("f_senha").value;
-        const endpoint = `https://5a72493b-be22-4c35-a0f6-ba012ae6021a-00-3icrzf9xsvybj.spock.replit.dev/?matricula=${mat}&senha=${pas}`;
+        const endpoint = `${this.config.endpoint}?matricula=${mat}&senha=${pas}`;
         
         console.log(endpoint);
 
@@ -150,10 +148,10 @@ class Login {
             .then(res=>res.json())
             .then(res=>{
                 if(res) {
-                    this.logado = true;
-                    this.matlogado = mat;
-                    this.nomelogado = res.nome;
-                    this.acessologado = res.acesso;
+                    sessionStorage.setItem("logado", "true");
+                    sessionStorage.setItem("matlogado", mat);
+                    sessionStorage.setItem("nomelogado", res.nome);
+                    sessionStorage.setItem("acessoLogado", res.acesso);
                     this.callback_ok();
                     h1_pag.innerHTML = "Login efetuado";
                     this.fechar();
