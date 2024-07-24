@@ -15,6 +15,13 @@ class Login {
     }
 
     static login=(callback_ok, callback_nao, config)=>{
+        sessionStorage.setItem("logado", "false");
+        sessionStorage.setItem("matlogado", "");
+        sessionStorage.setItem("nomelogado", "");
+        sessionStorage.setItem("acessoLogado", "");
+        this.config.cor = config.cor 
+        this.config.img = config.img
+        this.config.endpoint = config.endpoint
 
         this.callback_ok=()=>{callback_ok()};
         this.callback_nao=()=>{callback_nao()};
@@ -86,6 +93,12 @@ class Login {
         btn_cancelar.innerHTML = "Cancelar";
         botoesLogin.appendChild(btn_cancelar);
         btn_cancelar.addEventListener("click", (evt)=>{
+            
+            sessionStorage.setItem("logado", "false");
+            sessionStorage.setItem("matlogado", "");
+            sessionStorage.setItem("nomelogado", "");
+            sessionStorage.setItem("acessoLogado", "");
+        
             this.fechar();
             console.log(h1);
             h1.innerHTML = "Operação cancelada";
@@ -152,14 +165,13 @@ class Login {
                     sessionStorage.setItem("matlogado", mat);
                     sessionStorage.setItem("nomelogado", res.nome);
                     sessionStorage.setItem("acessoLogado", res.acesso);
-                    this.callback_ok();
                     h1_pag.innerHTML = "Login efetuado";
                     this.fechar();
                 } else { 
-                    this.logado = false;
-                    this.matlogado = null;
-                    this.nomelogado = null;
-                    this.acessologado = null;
+                    sessionStorage.setItem("logado", "false");
+                    sessionStorage.setItem("matlogado", "");
+                    sessionStorage.setItem("nomelogado", "");
+                    sessionStorage.setItem("acessoLogado", "");
                     this.callback_nao();           
                 }
 

@@ -1,24 +1,28 @@
 import {Cxmsg} from "./cxmsg2.js"
 
 
-const config={
+const config_callback={
     cor: "rgb(106, 35, 35)",
     tipo: "ok",
     comando_sn: null
+};
+
+const config_login={
+    cor: "rgb(106, 35, 35)",
+    img: "0dead.png",
+    endpoint: "https://5a72493b-be22-4c35-a0f6-ba012ae6021a-00-3icrzf9xsvybj.spock.replit.dev/"
 };
 
 const titulo = "Erro";
 const texto = "Login não efetuado! Usuário ou senha incorretos.";
 
 const callback_ok=()=>{
-    alert("Login efetuado com sucesso!");
 }
-
 const callback_nao=()=>{
-    Cxmsg.mostrar(config, titulo, texto);
+    Cxmsg.mostrar(config_callback, titulo, texto);
 }
 
-Login.login(callback_ok, callback_nao);
+Login.login(callback_ok, callback_nao, config_login);
 
 
 
