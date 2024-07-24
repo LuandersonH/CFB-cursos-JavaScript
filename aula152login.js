@@ -93,13 +93,13 @@ class Login {
         btn_cancelar.innerHTML = "Cancelar";
         botoesLogin.appendChild(btn_cancelar);
         btn_cancelar.addEventListener("click", (evt)=>{
-            
             sessionStorage.setItem("logado", "false");
             sessionStorage.setItem("matlogado", "");
             sessionStorage.setItem("nomelogado", "");
             sessionStorage.setItem("acessoLogado", "");
         
             this.fechar();
+
             console.log(h1);
             h1.innerHTML = "Operação cancelada";
 
@@ -111,7 +111,7 @@ class Login {
             btn_tentarDnv.addEventListener("click", ()=>{
                 h1.innerHTML = "Luanderson"
                 btn_tentarDnv.remove()
-                this.login(this.callback_ok, this.callback_nao)
+                this.login(this.callback_ok, this.callback_nao, this.config)
             })
 
         });

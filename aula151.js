@@ -1,5 +1,7 @@
 import {Cxmsg} from "./cxmsg2.js"
 
+const titulo = "Erro";
+const texto = "Login não efetuado! Usuário ou senha incorretos.";
 
 const config_callback={
     cor: "rgb(106, 35, 35)",
@@ -12,9 +14,6 @@ const config_login={
     img: "0dead.png",
     endpoint: "https://5a72493b-be22-4c35-a0f6-ba012ae6021a-00-3icrzf9xsvybj.spock.replit.dev/"
 };
-
-const titulo = "Erro";
-const texto = "Login não efetuado! Usuário ou senha incorretos.";
 
 const callback_ok=()=>{
 }
