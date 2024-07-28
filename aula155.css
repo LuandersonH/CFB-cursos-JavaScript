@@ -50,6 +50,20 @@
     color: white;
 }
 
+.coluna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.DgvIcone {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid green; */
+    
+}
+
 .c1 {
     width: 50px;
 }
@@ -67,5 +81,9 @@
 }
 
 .c5 {
-    width: 100px;
+    display: flex;
+    justify-content: space-around !important;
+    align-items: space-around !important;
+    flex-direction: row !important;
+    width: 150px;
 }
