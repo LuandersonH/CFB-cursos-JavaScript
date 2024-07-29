@@ -1,0 +1,89 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;    
+    box-sizing: border-box;
+}
+
+.dgv {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.dgvTitulos {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    background-color: rgb(60, 77, 163);
+    border-radius: 5px 5px 0px 0px;
+}
+
+.dgvLinha div, .dgvLinha div {
+    padding: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.dgvLinha {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+}
+
+.dgvLinha:nth-child(odd) {
+    background-color: #aaa;
+}
+
+.dgvLinha:nth-child(even) {
+    background-color: #d4d4d4;
+}   
+
+.dgvLinha:hover {
+    background-color: rgb(97, 139, 160) !important;
+    cursor: pointer;
+    color: white;
+}
+
+.coluna {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid red; */
+}
+
+.DgvIcone {
+    width: 30px;
+    height: 30px;
+    /* border: 1px solid green; */
+    
+}
+
+.c1 {
+    width: 50px;
+}
+
+.c2 {
+    width: 150px;
+}
+
+.c3 {
+    width: 150px;
+}
+
+.c4 {
+    width: 150px;
+}
+
+.c5 {
+    display: flex;
+    justify-content: space-around !important;
+    align-items: space-around !important;
+    flex-direction: row !important;
+    width: 150px;
+}
