@@ -57,7 +57,22 @@ const dgv=(configdgv) => {
             const imgEditar = document.createElement("img");
             imgEditar.setAttribute("class", "DgvIcone");
             imgEditar.setAttribute("src", "img/editar.svg");
-            c5.appendChild(imgEditar)
+            c5.appendChild(imgEditar);
+            imgEditar.addEventListener("click",(evt)=>{
+                document.querySelector("#janelaEditar").classList.remove("ocultar")
+                const id = evt.target.parentNode.parentNode.firstChild.innerHTML;
+                const endpoint = `http://127.0.0.1:1880/produto/${id}`;
+                fetch(endpoint)
+                .then(res => res.json())
+                .then(res =>{
+                    document.querySelector("#f_idEditar").value = res[0].n_id_produto;
+                    document.querySelector("#f_produtoEditar").value = res[0].s_nome_produto;
+                    document.querySelector("#f_marcaEditar").value = res[0].s_marca_produtos;
+                    document.querySelector("#f_modeloEditar").value = res[0].s_modelo_produtos;
+                })
+                
+            })
+            
 
             const imgExibir = document.createElement("img");
             imgExibir.setAttribute("class", "DgvIcone");
@@ -86,14 +101,32 @@ const dgv=(configdgv) => {
 
 dgv(configdgv);
 
+document.querySelector("#btn_gravar").addEventListener("click", ()=>{
+    const id =  document.querySelector("#f_idEditar").value;
+    const produto =  document.querySelector("#f_produtoEditar").value;
+    const marca =  document.querySelector("#f_marcaEditar").value;
+    const modelo =  document.querySelector("#f_modeloEditar").value;
+
+    const endpoint = `http://127.0.0.1:1880/updateproduto/${id}/${produto}/${marca}/${modelo}`;
+    
+    fetch(endpoint)
+    .then(res => {
+        if (res.status == 200) {
+            document.querySelector("#janelaEditar").classList.add("ocultar")
+            dgv(configdgv);
+        } else {
+            alert("Erro! Não foi possível atualizar os dados")
+            console.log(res);
+        }
+    })
+})
+
 document.querySelector("#btn_ok").addEventListener("click", ()=>{
     document.querySelector(".janelaView").classList.add("ocultar")
 })
 
-/* <div class="dgvLinha">
-<div class="c1">01</div>
-<div class="c2">Processador</div>
-<div class="c3">Intel</div>
-<div class="c4">i7</div>
-<div class="c5">D E V</div>
-</div>  */
+
+document.querySelector("#btn_cancelar").addEventListener("click", ()=>{
+    document.querySelector("#janelaEditar").classList.add("ocultar")
+})
+

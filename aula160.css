@@ -126,15 +126,18 @@
 }
 
 .rodape {
+    justify-content: center;
     align-items: center !important;
+    flex-direction: row !important;
 }
 
-.btn_ok {
+.btn {
     background-color: #480;
     color: #fff;
     cursor: pointer;
     padding: 10px 30px;
     border-radius: 5px;
+    margin: 0px 6px;
 }
 
 .ocultar {

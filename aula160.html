@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aula 159, JavaScript</title>
-    <link rel="stylesheet" href="aula159.css">
+    <title>Aula 160, JavaScript</title>
+    <link rel="stylesheet" href="aula160.css">
     <!-- DATA GRID VIEW -->
 </head>
 <body>
@@ -23,25 +23,49 @@
         <div id="view" class="view">
             <div id="campo" class="campo">
                 <label for="f_id">ID</label>
-                <input type="text" name="f_id" id="f_id">
+                <input type="text" name="f_id" id="f_id" readonly>
             </div>
             <div id="campo" class="campo">
                 <label for="f_produto">PRODUTO</label>
-                <input type="text" name="f_produto" id="f_produto">
+                <input type="text" name="f_produto" id="f_produto" readonly>
             </div>
             <div id="campo" class="campo">
                 <label for="f_marca">MARCA</label>
-                <input type="text" name="f_marca" id="f_marca">
+                <input type="text" name="f_marca" id="f_marca" readonly>
             </div>
             <div id="campo" class="campo">
                 <label for="f_modelo">MODELO</label>
-                <input type="text" name="f_modelo" id="f_modelo">
+                <input type="text" name="f_modelo" id="f_modelo" readonly>
             </div>
             <div class="campo rodape">
-                <button id="btn_ok" class="btn_ok">OK</button>
+                <button id="btn_ok" class="btn">OK</button>
             </div>
         </div>
     </div>
-    <script src="aula159.js" type="module"></script>
+    <div id="janelaEditar" class="janelaView ocultar">
+        <div id="view" class="view">
+            <div id="campo" class="campo">
+                <label for="f_idEditar">ID</label>
+                <input type="text" name="f_idEditar" id="f_idEditar">
+            </div>
+            <div id="campo" class="campo">
+                <label for="f_produtoEditar">PRODUTO</label>
+                <input type="text" name="f_produtoEditar" id="f_produtoEditar">
+            </div>
+            <div id="campo" class="campo">
+                <label for="f_marcaEditar">MARCA</label>
+                <input type="text" name="f_marcaEditar" id="f_marcaEditar">
+            </div>
+            <div id="campo" class="campo">
+                <label for="f_modeloEditar">MODELO</label>
+                <input type="text" name="f_modeloEditar" id="f_modeloEditar">
+            </div>
+            <div class="campo rodape">
+                <button id="btn_gravar" class="btn">gravar</button>
+                <button id="btn_cancelar" class="btn">cancelar</button>
+            </div>
+        </div>
+    </div>
+    <script src="aula160.js" type="module"></script>
 </body>
 </html>
