@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 159, JavaScript</title>
+    <link rel="stylesheet" href="aula159.css">
+    <!-- DATA GRID VIEW -->
+</head>
+<body>
+    <div id="dgvProdutos" class="dgv">
+        <div id="dgvTitulos" class="dgvTitulos">
+            <div class="c1">ID</div>
+            <div class="c2">Produto</div>
+            <div class="c3">Marca</div>
+            <div class="c4">Modelo</div>
+            <div class="c5">Funções</div>
+        </div>
+        <div id="dgvDados" class="dgvDados">
+        </div> 
+    </div>
+    <div id="janelaView" class="janelaView ocultar">
+        <div id="view" class="view">
+            <div id="campo" class="campo">
+                <label for="f_id">ID</label>
+                <input type="text" name="f_id" id="f_id">
+            </div>
+            <div id="campo" class="campo">
+                <label for="f_produto">PRODUTO</label>
+                <input type="text" name="f_produto" id="f_produto">
+            </div>
+            <div id="campo" class="campo">
+                <label for="f_marca">MARCA</label>
+                <input type="text" name="f_marca" id="f_marca">
+            </div>
+            <div id="campo" class="campo">
+                <label for="f_modelo">MODELO</label>
+                <input type="text" name="f_modelo" id="f_modelo">
+            </div>
+            <div class="campo rodape">
+                <button id="btn_ok" class="btn_ok">OK</button>
+            </div>
+        </div>
+    </div>
+    <script src="aula159.js" type="module"></script>
+</body>
+</html>
