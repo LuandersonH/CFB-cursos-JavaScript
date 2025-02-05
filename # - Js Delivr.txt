@@ -5,3 +5,7 @@ MODELO: https://cdn.jsdelivr.net/gh/conta_github/nome_repositorio_arquivo
 LINK DO GITHUB: https://github.com/LuandersonH/CFB-cursos-JavaScript/blob/main/aula150login.js
 
 RESULTADO FINAL:https://cdn.jsdelivr.net/gh/LuandersonH/CFB-cursos-JavaScript/aula150login.js
+
+https://github.com/LuandersonH/landing-page-advogada/blob/main/landing-page-advogada/index.html
+
+https://cdn.jsdelivr.net/gh/LuandersonH/landing-page-advogada/blob/main/landing-page-advogada/index.html
